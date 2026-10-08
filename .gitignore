@@ -1,0 +1,50 @@
+# Terraform state, local plugins, and variable files that hold secrets.
+# Commit *.tfvars.example when a milestone needs a documented variable list.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+*.tfplan
+tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Kubeconfigs (cluster credentials).
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+.kube/
+
+# SSH private keys. Public keys (*.pub) stay committable.
+id_rsa
+id_rsa.*
+!id_rsa.pub
+id_ed25519
+id_ed25519.*
+!id_ed25519.pub
+id_ecdsa
+id_ecdsa.*
+!id_ecdsa.pub
+id_dsa
+id_dsa.*
+!id_dsa.pub
+*.pem
+
+# Local environment files.
+.env
+.env.*
+!.env.example
+
+# Ansible vault password files. Encrypted vault content may be committed later.
+.vault_pass
+.vault-pass
+.vault_password
+.vault-password
+vault_password.txt
+ansible-vault-password
+.ansible-vault-password
+.ansible_vault_pass
